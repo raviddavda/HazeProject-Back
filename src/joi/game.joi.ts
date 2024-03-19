@@ -4,7 +4,7 @@ import { IImage } from "../@types/user";
 
 const gameSchema = Joi.object<IGame>({
   title: Joi.string().min(2).max(256).required(),
-  description: Joi.string().min(2).max(1024).required(),
+  description: Joi.string().min(2).max(4096).required(),
   email: Joi.string()
     .email({ tlds: { allow: false } })
     .min(5)

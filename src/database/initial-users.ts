@@ -14,7 +14,7 @@ export const initUsers = [
       zip: "12345",
     },
     image: {
-      url: "public/images/default-avatar.webp",
+      url: "https://picsum.photos/200/300",
       alt: "user-profile",
     },
     phone: "050-8123091",

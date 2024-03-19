@@ -13,13 +13,13 @@ const initDB = async () => {
     Logger.log("Database empty, Automatically added:", saved);
   }
 
-  // const gamesCount = await Game.countDocuments();
-  // if (gamesCount != 0) return;
+  const gamesCount = await Game.countDocuments();
+  if (gamesCount != 0) return;
 
-  // for (let fM of initGames) {
-  //   const saved = await new Game(game).save();
-  //   Logger.log("Database empty, Automatically added:", saved);
-  // }
+  for (let game of initGames) {
+    const saved = await new Game(game).save();
+    Logger.log("Database empty, Automatically added:", saved);
+  }
 };
 
 export { initDB };

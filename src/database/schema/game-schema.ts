@@ -23,13 +23,13 @@ const gameSchema = new Schema<IGame>({
     type: String,
     required: true,
     minlength: 2,
-    maxlength: 256,
+    maxlength: 4096,
   },
   email: {
     required: false,
     type: String,
     // minlength: 5,
-    maxlength: 255,
+    maxlength: 256,
   },
   createdAt: {
     type: Date,

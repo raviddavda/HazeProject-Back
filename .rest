@@ -1,0 +1,135 @@
+### GET people
+GET http://localhost:8080/api/v1/users
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTcwMzMzMjkyMH0.qphcL2OlmZCxYO8ts0DTvuicjUhoq_1kEAlMK_VBRq0
+
+### GET user by ID
+GET http://localhost:8080/api/v1/users/65ad08ce1269eb1db2b6e720
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIl9pZCI6IjY1YWQwOGNlMTI2OWViMWRiMmI2ZTcyMCIsImlhdCI6MTcwNjYyMzA0OH0.2odrwqwmM3kttvD33Iql-eVdT_0HAlAdBWwqC1bdCzg
+
+
+### ADD user
+POST http://localhost:8080/api/v1/users
+Content-Type: application/json
+
+{
+  "name": {
+    "first": "Jean",
+    "last": "Kiristein"
+  },
+  "address": {
+    "street": "123 Main St",
+    "city": "Shiganshina",
+    "country": "Paradis",
+    "houseNumber":13,
+    "zip": "12345"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://picsum.photos/200/300"
+  },
+  "phone": "650819090991",
+  "email": "jeank@behind.com",
+  "isBusiness": true,
+  "password": "12346oooooaA"
+}
+
+### LOGIN user
+POST http://localhost:8080/api/v1/users/login
+Content-Type: application/json
+
+{
+  "email":"admin@admin.com",
+  "password":"123456aA!"
+}
+
+### DELETE jean by id
+DELETE http://localhost:8080/api/v1/users/658054a88e12382d4707e67a
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplYW5rQGJlaGluZC5jb20iLCJpYXQiOjE3MDMzMzA1OTB9.pr-DmtXHlwDF1CRpelRHBD7mn4UYjkHCqnLzD1nDIbY
+
+### UPDATE user
+PUT http://localhost:8080/api/v1/users/6586c6bf053f8e49503d3b21
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplYW5rQGJlaGluZC5jb20iLCJpYXQiOjE3MDMzMzE1NTJ9.6lISoRLr92I_jKMz0wcQe0Fo_M9_H2dl_Ln4NHVDj_Q
+Content-Type: application/json
+
+{
+  "name": {
+    "first": "Jean",
+    "last": "Kiristein"
+  },
+  "address": {
+    "street": "123 Main St",
+    "city": "Shiganshina",
+    "country": "Paradis",
+    "houseNumber":13,
+    "zip": "12345"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://picsum.photos/200/300"
+  },
+  "phone": "050-8123091",
+  "email": "jeank@behind.com",
+  "isBusiness": false,
+  "password": "123456aA!"
+}
+
+### PATCH jean by id
+PATCH http://localhost:8080/api/v1/users/6586c6bf053f8e49503d3b21
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplYW5rQGJlaGluZC5jb20iLCJpYXQiOjE3MDMzMzE1NTJ9.6lISoRLr92I_jKMz0wcQe0Fo_M9_H2dl_Ln4NHVDj_Q
+Content-Type: application/json
+
+{
+  "isBusiness": false
+}
+
+### GET all games
+GET http://localhost:8080/api/v1/games
+
+### CREATE game
+POST http://localhost:8080/api/v1/games
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTcwNTgzODg1MX0.eekoJ1OBTPo61ccPdgqytfEMDnW2--y6F-GTGw07FN0
+Content-Type: application/json
+
+{
+  "title": "Game1",
+  "description":"Game 1",
+  "category":"Action",
+  "email": "",
+    "image": {
+    "alt": "userfile",
+    "url": "https://miro.medium.t:1358/1*jPuEs4dGcUJSI46ZjBG_ew.jpeg"
+  }
+}
+
+### GET my user created games
+GET http://localhost:8080/api/v1/games/my-games
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2FzYWpAY2FiaW4uY29tIiwiaWF0IjoxNzAzMzU2NDIzfQ.hzmfq9Y8tA7HQTjhjr9ojse4Ad2XxynSpHjrtqY1Wjw
+
+
+### GET game by ID
+GET http://localhost:8080/api/v1/games/65871b323acef2376b715c94
+
+
+### PUT game by ID
+PUT http://localhost:8080/api/v1/games/65f96f460d5236eaf5cbe43a
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIl9pZCI6IjY1Zjk2YWE5MGQ1MjM2ZWFmNWNiZTNhMCIsImlzQWRtaW4iOnRydWUsImlzQnVzaW5lc3MiOnRydWUsImlhdCI6MTcxMDg1MDY3NH0.5dXNT1Wv4h3aV5rvgAcv0rFhwOUsupCv6aORfplCTuk
+Content-Type: application/json
+
+{
+  "title": "Game1jiojjiojijiooijoji",
+  "description":"Game 1",
+  "category":"Action",
+    "email": "",
+    "image": {
+    "alt": "userfile",
+    "url": "https://miro.medium.t:1358/1*jPuEs4dGcUJSI46ZjBG_ew.jpeg"
+  }
+}
+
+### LIKE game by ID
+PATCH http://localhost:8080/api/v1/games/65871b323acef2376b715c94
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVyZW5qQHBhdGhzLmNvbSIsImlhdCI6MTcwMzQxMTExM30.i35cvVXmoIyX0DjCOikG4hOKRsnSvurEFViyvENgZQE
+
+### DELETE game by ID
+DELETE http://localhost:8080/api/v1/games/65881f7e64350a0c739b9145
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTcwMzQyMTI4OX0.sK2_Liu-YaV7Fa96UQYSx8Spraf_SevQ18gw-zzKkFQ

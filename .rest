@@ -27,10 +27,10 @@ Content-Type: application/json
     "alt": "user-profile",
     "url": "https://picsum.photos/200/300"
   },
-  "phone": "650819090991",
+  "phone": "0524444444",
   "email": "jeank@behind.com",
   "isBusiness": true,
-  "password": "12346oooooaA"
+  "password": "12346oooooaA!"
 }
 
 ### LOGIN user
@@ -38,8 +38,8 @@ POST http://localhost:8080/api/v1/users/login
 Content-Type: application/json
 
 {
-  "email":"admin@admin.com",
-  "password":"123456aA!"
+  "email":"jeank@behind.com",
+  "password":"12346oooooaA!"
 }
 
 ### DELETE jean by id
@@ -47,8 +47,8 @@ DELETE http://localhost:8080/api/v1/users/658054a88e12382d4707e67a
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplYW5rQGJlaGluZC5jb20iLCJpYXQiOjE3MDMzMzA1OTB9.pr-DmtXHlwDF1CRpelRHBD7mn4UYjkHCqnLzD1nDIbY
 
 ### UPDATE user
-PUT http://localhost:8080/api/v1/users/6586c6bf053f8e49503d3b21
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplYW5rQGJlaGluZC5jb20iLCJpYXQiOjE3MDMzMzE1NTJ9.6lISoRLr92I_jKMz0wcQe0Fo_M9_H2dl_Ln4NHVDj_Q
+PUT http://localhost:8080/api/v1/users/65f9dae12ee3c682875060f6
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplYW5rQGJlaGluZC5jb20iLCJfaWQiOiI2NWY5ZGFlMTJlZTNjNjgyODc1MDYwZjYiLCJpc0FkbWluIjpmYWxzZSwiaXNCdXNpbmVzcyI6dHJ1ZSwiaWF0IjoxNzEwODczMzQzfQ.Tl1mfSTjU-uB93YbSP0iaJD0lfIv-LbJOch69urT3lY
 Content-Type: application/json
 
 {

@@ -25,6 +25,7 @@ router.get("/", isAdmin, async (req, res, next) => {
   }
 });
 
+//GET user by ID
 router.get("/:id", isAdminOrUser, async (req, res, next) => {
   try {
     const { id } = req.params;
@@ -39,6 +40,7 @@ router.get("/:id", isAdminOrUser, async (req, res, next) => {
   }
 });
 
+// UPDATE user
 router.put("/:id", isUser, validateRegistration, async (req, res, next) => {
   req.body.password = await auth.hashPassword(req.body.password);
 
